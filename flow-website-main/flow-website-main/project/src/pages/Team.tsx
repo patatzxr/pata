@@ -59,7 +59,7 @@ export default function Team() {
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
-                  href="https://github.com/john-automated-systems/ai-automation-portfolio"
+                  href="https://github.com/anastasiosaienterprise-lang/AUTOMATION"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-slate-800/50 backdrop-blur-sm border border-blue-500/30 text-blue-400 font-semibold rounded-lg hover:bg-slate-800/70 hover:border-blue-400/50 hover:shadow-lg hover:shadow-blue-500/30 transition-all duration-300"
@@ -68,7 +68,7 @@ export default function Team() {
                   Portfolio
                 </a>
                 <a
-                  href="https://github.com/john-automated-systems/john-automated-systems"
+                  href="https://github.com/anastasiosaienterprise-lang/Profile"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-slate-800/50 backdrop-blur-sm border border-blue-500/30 text-blue-400 font-semibold rounded-lg hover:bg-slate-800/70 hover:border-blue-400/50 hover:shadow-lg hover:shadow-blue-500/30 transition-all duration-300"
