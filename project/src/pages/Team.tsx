@@ -12,6 +12,9 @@ export default function Team() {
             <p className="text-xl text-slate-300 max-w-2xl mx-auto leading-relaxed">
               Real people behind the agency.
             </p>
+            <p className="text-slate-400 max-w-2xl mx-auto mt-4 leading-relaxed">
+              The team designs and implements production-grade AI automation systems for businesses. All systems are built for operational stability, integration with existing infrastructure, and long-term maintainability.
+            </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">

@@ -193,6 +193,9 @@ export default function Solutions() {
             <p className="text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed">
               Custom AI automation systems designed for your specific business workflows.
             </p>
+            <p className="text-lg text-slate-400 max-w-3xl mx-auto mt-4 leading-relaxed">
+              These are modular AI automation systems built for specific business processes across sales, customer support, and internal operations. Each solution addresses defined workflows and integrates with your existing business systems.
+            </p>
           </div>
 
           <div className="space-y-12">
@@ -213,8 +216,19 @@ export default function Solutions() {
                     <h2 className={`text-2xl sm:text-3xl font-bold mb-4 text-slate-100 ${solution.colors.titleHover} transition-colors`}>
                       {solution.title}
                     </h2>
-                    <p className="text-lg text-slate-300 mb-6 leading-relaxed">
+                    <p className="text-lg text-slate-300 mb-4 leading-relaxed">
                       {solution.description}
+                    </p>
+                    <p className="text-sm text-slate-400 mb-6 leading-relaxed">
+                      <span className="font-semibold">Business Function:</span> {
+                        solution.id === 'customer-support' ? 'Customer service operations — replaces manual ticket triage and repetitive response workflows.' :
+                        solution.id === 'voice-callers' ? 'Sales and support phone operations — replaces manual outbound calling and inbound call handling.' :
+                        solution.id === 'chat-agents' ? 'Digital customer engagement — replaces manual chat-based support and lead qualification.' :
+                        solution.id === 'lead-qualification' ? 'Sales pipeline management — replaces manual lead screening and appointment coordination.' :
+                        solution.id === 'operations' ? 'Internal business operations — replaces manual data processing and cross-system workflows.' :
+                        solution.id === 'web-apps' ? 'Digital infrastructure — provides interfaces for automated workflows and system control.' :
+                        'Custom business process automation — replaces department-specific manual workflows.'
+                      }
                     </p>
 
                     <ul className="space-y-3">

@@ -125,6 +125,11 @@ export default function Home() {
           <p className="text-lg font-medium text-cyan-400 mb-12">
             Your competitors are not "experimenting" anymore. They are systematizing.
           </p>
+          <div className="max-w-3xl mx-auto mb-12 bg-slate-900/30 backdrop-blur-sm border border-cyan-500/20 rounded-xl p-6">
+            <p className="text-slate-300 leading-relaxed">
+              Coreflow Automation is an AI automation agency that builds business automation systems for sales, support, and internal operations. These systems automate complete workflows and business outcomes — not individual tasks or disconnected tools.
+            </p>
+          </div>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               to="/contact"
@@ -189,6 +194,30 @@ export default function Home() {
           <p className="text-xl font-semibold text-cyan-400 text-center">
             Growth exposes weak systems.
           </p>
+
+          <div className="mt-16 max-w-4xl mx-auto">
+            <h3 className="text-2xl font-bold mb-6 text-slate-100 text-center">
+              What These Systems Replace
+            </h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              {[
+                'Manual lead qualification calls',
+                'Repetitive customer support inquiries',
+                'Manual appointment scheduling and confirmations',
+                'Copy-paste data entry between systems',
+                'Manual document processing and routing',
+                'Repetitive email responses and follow-ups',
+              ].map((task, index) => (
+                <div
+                  key={index}
+                  className="flex items-start gap-3 bg-slate-900/30 backdrop-blur-sm border border-cyan-500/20 rounded-xl p-4"
+                >
+                  <div className="flex-shrink-0 w-1.5 h-1.5 rounded-full bg-cyan-400 mt-2" />
+                  <p className="text-slate-300 text-sm">{task}</p>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
       </section>
 
@@ -378,9 +407,12 @@ export default function Home() {
           <p className="text-lg text-slate-300 mb-6 leading-relaxed">
             They will become baseline.
           </p>
-          <p className="text-xl text-slate-300 mb-12 leading-relaxed">
+          <p className="text-xl text-slate-300 mb-6 leading-relaxed">
             The question is whether you design your systems early — or inherit complexity
             later.
+          </p>
+          <p className="text-lg text-slate-400 mb-12 leading-relaxed max-w-3xl mx-auto">
+            AI automation for business operations is treated as permanent infrastructure — not temporary tooling. Systems are designed to scale with operational growth and compound in value over time.
           </p>
           <Link
             to="/contact"

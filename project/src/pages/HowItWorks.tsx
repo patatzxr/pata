@@ -75,6 +75,9 @@ export default function HowItWorks() {
             <p className="text-lg text-slate-400 mt-4 max-w-2xl mx-auto">
               This page exists to explain how systems are delivered.
             </p>
+            <p className="text-slate-300 mt-6 max-w-2xl mx-auto leading-relaxed">
+              This is the standardized AI automation delivery process used for business automation systems across sales, support, and operations. The process applies to all implementations regardless of industry or scale.
+            </p>
           </div>
 
           <div className="space-y-16">
@@ -199,8 +202,11 @@ export default function HowItWorks() {
             <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-br from-cyan-500/20 to-blue-500/20 border border-cyan-500/30 mb-6">
               <FileText className="text-cyan-400" size={28} />
             </div>
-            <p className="text-lg text-slate-300 mb-8 leading-relaxed">
+            <p className="text-lg text-slate-300 mb-6 leading-relaxed">
               For strategic context and engagement models, view the Growth Framework.
+            </p>
+            <p className="text-sm text-slate-400 mb-8 leading-relaxed">
+              Every system delivered through this process prioritizes risk reduction, operational stability, and long-term maintainability over rapid feature deployment.
             </p>
             <Link
               to="/growth-framework"

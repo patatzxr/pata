@@ -66,6 +66,9 @@ export default function Examples() {
             <p className="text-lg text-slate-400 max-w-3xl mx-auto leading-relaxed">
               We don't ask you to believe us. We show you working systems.
             </p>
+            <p className="text-slate-300 max-w-3xl mx-auto mt-4 leading-relaxed">
+              These are business process automation examples built to demonstrate real-world AI automation systems in sales, support, and operational workflows.
+            </p>
           </div>
 
           <div className="bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-500/30 rounded-xl p-6 mb-16 shadow-lg shadow-cyan-500/10">
@@ -92,9 +95,13 @@ export default function Examples() {
                   </div>
                 </div>
 
-                <h3 className="text-2xl sm:text-3xl font-bold mb-6 text-slate-100">
+                <h3 className="text-2xl sm:text-3xl font-bold mb-4 text-slate-100">
                   {demo.title}
                 </h3>
+
+                <p className="text-sm text-slate-400 mb-6 italic">
+                  {index === 0 ? 'This system replaces manual phone-based appointment scheduling with a structured AI workflow that operates 24/7.' : 'This system replaces manual message-based appointment coordination with automated chat workflows and CRM integration.'}
+                </p>
 
                 <a
                   href={demo.videoUrl}
@@ -153,9 +160,16 @@ export default function Examples() {
                   </div>
                 </div>
 
-                <h3 className="text-xl font-bold mb-4 text-slate-100 group-hover:text-cyan-400 transition-colors">
+                <h3 className="text-xl font-bold mb-3 text-slate-100 group-hover:text-cyan-400 transition-colors">
                   {demo.title}
                 </h3>
+
+                <p className="text-xs text-slate-400 mb-4 italic">
+                  {index === 0 ? 'This system replaces manual lead qualification calls with structured AI voice workflows.' :
+                   index === 1 ? 'This system replaces manual support ticket routing with automated classification and assignment.' :
+                   index === 2 ? 'This system replaces manual appointment reminder calls and messages with automated confirmation workflows.' :
+                   'This system replaces manual document data entry with automated extraction and processing.'}
+                </p>
 
                 <div className="space-y-3">
                   <div>

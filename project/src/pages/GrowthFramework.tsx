@@ -43,8 +43,11 @@ export default function GrowthFramework() {
                 Most implementations fail because they focus on tools instead of systems —
                 adding automation on top of workflows that were never designed to scale.
               </p>
-              <p className="text-lg text-slate-300 leading-relaxed">
+              <p className="text-lg text-slate-300 mb-4 leading-relaxed">
                 The Growth Framework exists to solve that.
+              </p>
+              <p className="text-sm text-slate-400 leading-relaxed">
+                This is a business automation strategy used to design scalable AI automation systems that integrate with existing operations and compound in value over time.
               </p>
             </div>
 
@@ -119,10 +122,13 @@ export default function GrowthFramework() {
                 ))}
               </ul>
 
-              <p className="text-slate-400 mt-6 leading-relaxed">
+              <p className="text-slate-400 mt-6 mb-4 leading-relaxed">
                 This track is focused on{' '}
                 <span className="font-semibold text-cyan-400">business outcomes</span>, not
                 feature delivery.
+              </p>
+              <p className="text-sm text-slate-500 leading-relaxed">
+                Best suited for: businesses experiencing operational bottlenecks, scaling challenges, or manual workflow dependencies that limit growth.
               </p>
             </div>
 
@@ -150,9 +156,12 @@ export default function GrowthFramework() {
                 ))}
               </ul>
 
-              <p className="text-slate-400 mt-6 leading-relaxed">
+              <p className="text-slate-400 mt-6 mb-4 leading-relaxed">
                 This track prioritizes{' '}
                 <span className="font-semibold text-cyan-400">precision and control</span>.
+              </p>
+              <p className="text-sm text-slate-500 leading-relaxed">
+                Best suited for: businesses with defined automation requirements, specific compliance needs, or complex integration constraints.
               </p>
             </div>
           </div>

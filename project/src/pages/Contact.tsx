@@ -14,6 +14,11 @@ export default function Contact() {
               Get a clear assessment of your automation opportunities and operational
               bottlenecks.
             </p>
+            <div className="max-w-2xl mx-auto mt-8 bg-slate-900/30 backdrop-blur-sm border border-cyan-500/20 rounded-xl p-6">
+              <p className="text-sm text-slate-400 leading-relaxed">
+                An AI automation audit evaluates your current workflows, identifies manual bottlenecks, assesses automation feasibility, and defines clear system boundaries for implementation. The audit provides a structured assessment of where AI automation can create operational leverage.
+              </p>
+            </div>
           </div>
 
           <div className="bg-slate-900/30 backdrop-blur-sm border border-cyan-500/20 rounded-2xl p-8 sm:p-12 shadow-xl shadow-cyan-500/10">
