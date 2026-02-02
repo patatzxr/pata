@@ -1,6 +1,16 @@
+import { useEffect } from 'react';
 import { Github, ExternalLink } from 'lucide-react';
+import { setPageMeta, seoConfig } from '../utils/seo';
 
 export default function Team() {
+  useEffect(() => {
+    setPageMeta({
+      title: seoConfig.team.title,
+      description: seoConfig.team.description,
+      keywords: seoConfig.team.keywords,
+      canonical: seoConfig.team.canonical,
+    });
+  }, []);
   return (
     <div className="relative">
       <section className="relative py-24 px-4 sm:px-6 lg:px-8">
@@ -80,6 +90,30 @@ export default function Team() {
                   GitHub
                 </a>
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="relative py-24 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto">
+          <div className="bg-slate-900/30 backdrop-blur-sm border border-cyan-500/20 rounded-xl p-8 text-center">
+            <p className="text-lg text-slate-300 mb-6 leading-relaxed">
+              Learn how we build and deploy AI automation systems.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a
+                href="/how-it-works"
+                className="inline-flex items-center justify-center px-6 py-2 bg-slate-800/50 border border-cyan-500/30 text-cyan-400 font-semibold rounded-lg hover:bg-slate-800/70 transition-all"
+              >
+                View Our Process
+              </a>
+              <a
+                href="/solutions"
+                className="inline-flex items-center justify-center px-6 py-2 bg-slate-800/50 border border-cyan-500/30 text-cyan-400 font-semibold rounded-lg hover:bg-slate-800/70 transition-all"
+              >
+                See Our Solutions
+              </a>
             </div>
           </div>
         </div>

@@ -1,7 +1,17 @@
+import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { TrendingUp, Target, Cog, CheckCircle, ArrowRight } from 'lucide-react';
+import { setPageMeta, seoConfig } from '../utils/seo';
 
 export default function GrowthFramework() {
+  useEffect(() => {
+    setPageMeta({
+      title: seoConfig.growthFramework.title,
+      description: seoConfig.growthFramework.description,
+      keywords: seoConfig.growthFramework.keywords,
+      canonical: seoConfig.growthFramework.canonical,
+    });
+  }, []);
   const roiTrackFeatures = [
     'We audit workflows',
     'Identify high-leverage bottlenecks',

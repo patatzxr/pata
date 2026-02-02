@@ -1,6 +1,16 @@
+import { useEffect } from 'react';
 import { Calendar, Mail } from 'lucide-react';
+import { setPageMeta, seoConfig } from '../utils/seo';
 
 export default function Contact() {
+  useEffect(() => {
+    setPageMeta({
+      title: seoConfig.contact.title,
+      description: seoConfig.contact.description,
+      keywords: seoConfig.contact.keywords,
+      canonical: seoConfig.contact.canonical,
+    });
+  }, []);
 
   return (
     <div className="relative">

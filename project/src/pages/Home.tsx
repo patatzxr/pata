@@ -1,7 +1,79 @@
+import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, CheckCircle, Zap, Target, Shield } from 'lucide-react';
+import { setPageMeta, seoConfig } from '../utils/seo';
 
 export default function Home() {
+  useEffect(() => {
+    setPageMeta({
+      title: seoConfig.home.title,
+      description: seoConfig.home.description,
+      keywords: seoConfig.home.keywords,
+      canonical: seoConfig.home.canonical,
+      schema: {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        mainEntity: [
+          {
+            '@type': 'Question',
+            name: 'What exactly do you mean by "AI automation systems"?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'We design structured systems where AI operates inside defined workflows. This includes decision logic, integrations, escalation rules, and monitoring — not standalone tools or chatbots.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'Will this replace my team?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'No. These systems replace manual steps, not people. The goal is to remove repetitive operational work so human effort is applied where judgment is required.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'How is this different from using off-the-shelf automation tools?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Tools automate tasks. Systems automate outcomes. We design architecture that connects tools, data, and logic into a single operational flow.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'How quickly can we see results?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Initial systems are typically deployed within weeks. Operational impact begins as soon as a system replaces a manual bottleneck.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'Do we need to change our existing tools or software?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'No. We design around your current stack whenever possible and only replace components when they limit scalability.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'Is this a one-time project or an ongoing system?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Automation is treated as infrastructure. Systems can evolve, expand, and optimize as your operations change.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'What kind of businesses is this NOT for?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Businesses looking for AI experiments, generic chatbots, or quick hype-driven solutions will not benefit. We work best with teams that value structure and long-term operational clarity.',
+            },
+          },
+        ],
+      },
+    });
+  }, []);
   const solutions = [
     {
       title: 'AI Customer Support Systems',

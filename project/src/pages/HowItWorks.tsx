@@ -1,7 +1,17 @@
+import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { FileSearch, Compass, Rocket, Shield, FileText, CheckCircle } from 'lucide-react';
+import { setPageMeta, seoConfig } from '../utils/seo';
 
 export default function HowItWorks() {
+  useEffect(() => {
+    setPageMeta({
+      title: seoConfig.howItWorks.title,
+      description: seoConfig.howItWorks.description,
+      keywords: seoConfig.howItWorks.keywords,
+      canonical: seoConfig.howItWorks.canonical,
+    });
+  }, []);
   const steps = [
     {
       number: '1',
@@ -208,12 +218,21 @@ export default function HowItWorks() {
             <p className="text-sm text-slate-400 mb-8 leading-relaxed">
               Every system delivered through this process prioritizes risk reduction, operational stability, and long-term maintainability over rapid feature deployment.
             </p>
-            <Link
-              to="/growth-framework"
-              className="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white text-lg font-semibold rounded-lg hover:shadow-2xl hover:shadow-cyan-500/50 transition-all duration-300 hover:scale-105 shadow-lg shadow-cyan-500/30"
-            >
-              View the Growth Framework
-            </Link>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                to="/solutions"
+                className="inline-flex items-center justify-center px-6 py-2 bg-slate-800/50 border border-cyan-500/30 text-cyan-400 font-semibold rounded-lg hover:bg-slate-800/70 transition-all"
+              >
+                View AI Solutions
+                <ArrowRight className="ml-2" size={16} />
+              </Link>
+              <Link
+                to="/growth-framework"
+                className="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white text-lg font-semibold rounded-lg hover:shadow-2xl hover:shadow-cyan-500/50 transition-all duration-300 hover:scale-105 shadow-lg shadow-cyan-500/30"
+              >
+                View the Growth Framework
+              </Link>
+            </div>
           </div>
         </div>
       </section>

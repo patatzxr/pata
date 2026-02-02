@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import {
   MessageSquare,
@@ -9,8 +10,17 @@ import {
   Cog,
   ArrowRight,
 } from 'lucide-react';
+import { setPageMeta, seoConfig } from '../utils/seo';
 
 export default function Solutions() {
+  useEffect(() => {
+    setPageMeta({
+      title: seoConfig.solutions.title,
+      description: seoConfig.solutions.description,
+      keywords: seoConfig.solutions.keywords,
+      canonical: seoConfig.solutions.canonical,
+    });
+  }, []);
   const solutions = [
     {
       id: 'customer-support',
@@ -248,14 +258,38 @@ export default function Solutions() {
             ))}
           </div>
 
-          <div className="mt-16 text-center">
-            <Link
-              to="/contact"
-              className="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white text-lg font-semibold rounded-lg hover:shadow-2xl hover:shadow-cyan-500/50 transition-all duration-300 hover:scale-105 shadow-lg shadow-cyan-500/30"
-            >
-              Discuss Your Requirements
-              <ArrowRight className="ml-2" size={20} />
-            </Link>
+          <div className="mt-16 space-y-8">
+            <div className="bg-slate-900/30 backdrop-blur-sm border border-cyan-500/20 rounded-xl p-6">
+              <p className="text-slate-300 text-center mb-4 leading-relaxed">
+                Learn how these systems are built and deployed.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Link
+                  to="/how-it-works"
+                  className="inline-flex items-center justify-center px-6 py-2 bg-slate-800/50 border border-cyan-500/30 text-cyan-400 font-semibold rounded-lg hover:bg-slate-800/70 transition-all"
+                >
+                  View Our Process
+                  <ArrowRight className="ml-2" size={16} />
+                </Link>
+                <Link
+                  to="/growth-framework"
+                  className="inline-flex items-center justify-center px-6 py-2 bg-slate-800/50 border border-cyan-500/30 text-cyan-400 font-semibold rounded-lg hover:bg-slate-800/70 transition-all"
+                >
+                  Explore Engagement Models
+                  <ArrowRight className="ml-2" size={16} />
+                </Link>
+              </div>
+            </div>
+
+            <div className="text-center">
+              <Link
+                to="/contact"
+                className="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white text-lg font-semibold rounded-lg hover:shadow-2xl hover:shadow-cyan-500/50 transition-all duration-300 hover:scale-105 shadow-lg shadow-cyan-500/30"
+              >
+                Discuss Your Requirements
+                <ArrowRight className="ml-2" size={20} />
+              </Link>
+            </div>
           </div>
         </div>
       </section>
